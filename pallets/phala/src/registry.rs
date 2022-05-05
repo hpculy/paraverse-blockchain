@@ -19,8 +19,6 @@ pub mod pallet {
 
 	use crate::attestation::Error as AttestationError;
 	use crate::mq::MessageOriginInfo;
-	// Re-export
-	pub use crate::attestation::Attestation;
 
 	use phala_types::{
 		messaging::{
@@ -30,6 +28,8 @@ pub mod pallet {
 		ClusterPublicKey, ContractPublicKey, EcdhPublicKey, MasterPublicKey, WorkerPublicKey,
 		WorkerRegistrationInfo, AttestationProvider
 	};
+
+	pub use phala_types::AttestationReport;
 
 	bind_topic!(RegistryEvent, b"^phala/registry/event");
 	#[derive(Encode, Decode, TypeInfo, Clone, Debug)]
@@ -286,7 +286,7 @@ pub mod pallet {
 		pub fn register_worker(
 			origin: OriginFor<T>,
 			pruntime_info: WorkerRegistrationInfo<T::AccountId>,
-			attestation: Attestation,
+			attestation: AttestationReport,
 		) -> DispatchResult {
 			ensure_signed(origin)?;
 			// Validate RA report & embedded user data
@@ -726,7 +726,7 @@ pub mod pallet {
 							features: vec![4, 1],
 							operator: Some(1),
 						},
-						Attestation::OptOut
+						AttestationReport::OptOut
 					),
 					Error::<Test>::GenesisBlockHashRejected
 				);
@@ -743,7 +743,7 @@ pub mod pallet {
 						features: vec![4, 1],
 						operator: Some(1),
 					},
-					Attestation::OptOut,
+					AttestationReport::OptOut,
 				));
 				let worker = Workers::<Test>::get(worker_pubkey(1)).unwrap();
 				assert_eq!(worker.operator, Some(1));
@@ -760,7 +760,7 @@ pub mod pallet {
 						features: vec![4, 1],
 						operator: Some(2),
 					},
-					Attestation::OptOut,
+					AttestationReport::OptOut,
 				));
 				let worker = Workers::<Test>::get(worker_pubkey(1)).unwrap();
 				assert_eq!(worker.last_updated, 100);
