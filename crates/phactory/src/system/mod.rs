@@ -35,9 +35,9 @@ use phala_types::{
     contract::{self, messaging::ContractOperation, CodeIndex},
     messaging::{
         AeadIV, BatchDispatchClusterKeyEvent, ClusterKeyDistribution, DispatchMasterKeyEvent,
-        GatekeeperChange, GatekeeperLaunch, HeartbeatChallenge, KeyDistribution, MiningReportEvent,
-        NewGatekeeperEvent, RemoveGatekeeperEvent, SystemEvent, WorkerClusterReport,
-        WorkerContractReport, WorkerEvent,
+        EncryptedKey, GatekeeperChange, GatekeeperLaunch, HeartbeatChallenge, KeyDistribution,
+        MiningReportEvent, NewGatekeeperEvent, RemoveGatekeeperEvent, RotateMasterKeyEvent,
+        SystemEvent, WorkerClusterReport, WorkerContractReport, WorkerEvent,
     },
     EcdhPublicKey, WorkerPublicKey,
 };
@@ -693,6 +693,11 @@ impl<Platform: pal::Platform> System<Platform> {
                 self.process_first_gatekeeper_event(block, origin, new_gatekeeper_event)
             }
             GatekeeperLaunch::MasterPubkeyOnChain(_) => {
+                if !origin.is_pallet() {
+                    error!("Invalid origin {:?} sent a {:?}", origin, event);
+                    return;
+                }
+
                 info!(
                     "Gatekeeper launches on chain in block {}",
                     block.block_number
@@ -700,6 +705,10 @@ impl<Platform: pal::Platform> System<Platform> {
                 if let Some(gatekeeper) = &mut self.gatekeeper {
                     gatekeeper.master_pubkey_uploaded();
                 }
+            }
+            GatekeeperLaunch::RotateMasterKey(rotate_master_key_event) => {
+                info!("Master key rotation req in block {}", block.block_number);
+                self.process_master_key_rotation(block, origin, rotate_master_key_event);
             }
         }
     }
@@ -768,6 +777,29 @@ impl<Platform: pal::Platform> System<Platform> {
                 .as_mut()
                 .expect("gatekeeper must be initializaed here; qed.")
                 .register_on_chain();
+        }
+    }
+
+    /// Rotate the master key
+    ///
+    /// All the gatekeepers will generate the key, and only one will get published due to the nature of message queue.
+    ///
+    /// The generated master key will be shared to all the gatekeepers (include this one), and only then will they really
+    /// update the master key on-chain.
+    fn process_master_key_rotation(
+        &mut self,
+        block: &mut BlockInfo,
+        origin: MessageOrigin,
+        event: RotateMasterKeyEvent,
+    ) {
+        if !origin.is_pallet() {
+            error!("Invalid origin {:?} requires a master key rotation", origin);
+            return;
+        }
+
+        if let Some(gatekeeper) = &mut self.gatekeeper {
+            info!("Gatekeeper：Rotate master key");
+            gatekeeper.process_master_key_rotation(block, event);
         }
     }
 
@@ -854,6 +886,7 @@ impl<Platform: pal::Platform> System<Platform> {
                     error!("Failed to process master key distribution event: {:?}", err);
                 };
             }
+            KeyDistribution::MasterKeyRotation(_) => {}
         }
     }
 
@@ -1036,7 +1069,7 @@ impl<Platform: pal::Platform> System<Platform> {
         Ok(())
     }
 
-    // This function is used to decrypt the key encrypted by `encrypt_key_to()`
+    /// Decrypt the key encrypted by `encrypt_key_to()`
     fn decrypt_key_from(
         &self,
         ecdh_pubkey: &EcdhPublicKey,
