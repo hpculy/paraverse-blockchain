@@ -1319,7 +1319,7 @@ pub mod tests {
     use super::{BlockInfo, FixedPoint, MessageChannel, MiningEconomics};
     use fixed_macro::types::U64F64 as fp;
     use parity_scale_codec::{Decode, Encode};
-    use phala_mq::{BindTopic, Message, MessageDispatcher, MessageOrigin, Path};
+    use phala_mq::{BindTopic, Message, MessageDispatcher, MessageOrigin, Path, Sr25519Signer};
     use phala_types::{messaging as msg, WorkerPublicKey};
     use std::cell::RefCell;
 
@@ -1376,6 +1376,8 @@ pub mod tests {
     }
 
     impl MessageChannel for CollectChannel {
+        type Signer = Sr25519Signer;
+
         fn push_data(&self, data: Vec<u8>, to: impl Into<Path>) {
             let message = Message {
                 sender: MessageOrigin::Gatekeeper,
