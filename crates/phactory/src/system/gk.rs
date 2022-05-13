@@ -1,5 +1,6 @@
 use super::{TransactionError, TypedReceiver, WorkerState};
 use chain::pallet_fat::ClusterRegistryEvent;
+use chain::pallet_registry::GKRegistryEvent;
 use phala_crypto::{
     aead, ecdh,
     sr25519::{Persistence, Sr25519SecretKey, KDF},
@@ -13,7 +14,7 @@ use phala_types::{
         MiningInfoUpdateEvent, MiningReportEvent, RandomNumber, RandomNumberEvent,
         RotateMasterKeyEvent, SettleInfo, SystemEvent, WorkerEvent, WorkerEventWithKey,
     },
-    EcdhPublicKey, WorkerPublicKey,
+    EcdhPublicKey, MasterPublicKey, WorkerPublicKey,
 };
 use serde::{Deserialize, Serialize};
 use sp_core::{hashing, sr25519, Pair};
@@ -102,6 +103,8 @@ impl WorkerInfo {
 pub(crate) struct Gatekeeper<MsgChan> {
     #[serde(with = "more::key_bytes")]
     master_key: sr25519::Pair,
+    #[serde(with = "more::option_key_bytes")]
+    next_master_key: Option<sr25519::Pair>,
     master_pubkey_on_chain: bool,
     registered_on_chain: bool,
     egress: MsgChan, // TODO.kevin: syncing the egress state while migrating.
@@ -115,7 +118,7 @@ pub(crate) struct Gatekeeper<MsgChan> {
 
 impl<MsgChan> Gatekeeper<MsgChan>
 where
-    MsgChan: MessageChannel<Signer=Sr25519Signer> + Clone,
+    MsgChan: MessageChannel<Signer = Sr25519Signer> + Clone,
 {
     pub fn new(
         master_key: sr25519::Pair,
@@ -126,6 +129,7 @@ where
 
         Self {
             master_key,
+            next_master_key: None,
             master_pubkey_on_chain: false,
             registered_on_chain: false,
             egress: egress.clone(),
@@ -161,19 +165,36 @@ where
         self.registered_on_chain = true;
     }
 
-    #[allow(unused)]
-    pub fn unregister_on_chain(&mut self) {
-        info!("Gatekeeper: unregister on chain");
-        self.egress.set_dummy(true);
-        self.registered_on_chain = false;
-    }
-
     pub fn registered_on_chain(&self) -> bool {
         self.registered_on_chain
     }
 
+    pub fn prepare_rotated_master_key(&mut self, rotation_id: u64, new_master_key: sr25519::Pair) {
+        let master_pubkey = new_master_key.public();
+        self.egress
+            .push_message(&GKRegistryEvent::RotatedMasterPubkey {
+                rotation_id,
+                master_pubkey,
+            });
+        self.next_master_key = Some(new_master_key);
+    }
+
     pub fn master_pubkey_uploaded(&mut self) {
         self.master_pubkey_on_chain = true;
+    }
+
+    pub fn master_pubkey_rotated(&mut self, master_pubkey: MasterPublicKey) {
+        let next_master_key = self
+            .next_master_key
+            .as_ref()
+            .expect("new master key must be ready after rotation; qed.");
+        assert!(
+            next_master_key.public() == master_pubkey,
+            "Gatekeeper: Rotated master key mismatches"
+        );
+        self.master_key = next_master_key.clone();
+        self.next_master_key = None;
+        self.egress.set_signer(self.master_key.clone().into());
     }
 
     pub fn share_master_key(
@@ -199,7 +220,11 @@ where
             ));
     }
 
-    pub fn process_master_key_rotation(&mut self, block: &mut BlockInfo, event: RotateMasterKeyEvent) {
+    pub fn process_master_key_rotation(
+        &mut self,
+        block: &mut BlockInfo,
+        event: RotateMasterKeyEvent,
+    ) {
         let new_master_key = crate::new_sr25519_key();
         let secret_key = new_master_key.dump_secret_key();
         let secret_keys: BTreeMap<_, _> = event
@@ -517,7 +542,7 @@ impl From<&WorkerInfo> for pb::WorkerState {
     }
 }
 
-impl<MsgChan: MessageChannel<Signer=Sr25519Signer>> MiningEconomics<MsgChan> {
+impl<MsgChan: MessageChannel<Signer = Sr25519Signer>> MiningEconomics<MsgChan> {
     pub fn new(recv_mq: &mut MessageDispatcher, egress: MsgChan) -> Self {
         MiningEconomics {
             egress,
@@ -596,7 +621,7 @@ struct MiningMessageProcessor<'a, MsgChan> {
 
 impl<MsgChan> MiningMessageProcessor<'_, MsgChan>
 where
-    MsgChan: MessageChannel<Signer=Sr25519Signer>,
+    MsgChan: MessageChannel<Signer = Sr25519Signer>,
 {
     fn process(&mut self) {
         self.prepare();
