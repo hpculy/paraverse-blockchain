@@ -450,6 +450,7 @@ pub mod messaging {
     pub enum KeyDistribution {
         /// MessageOrigin::Gatekeeper -> MessageOrigin::Worker
         MasterKeyDistribution(DispatchMasterKeyEvent),
+        // TODO.shelven: a better way for real large batch key distribution
         /// MessageOrigin::Worker -> ALL
         ///
         /// The origin cannot be Gatekeeper, else the leakage of old master key will further leak the following keys
@@ -482,7 +483,6 @@ pub mod messaging {
         }
     }
 
-    // TODO.shelven: merge this into KeyDistribution
     bind_topic!(ClusterKeyDistribution<BlockNumber>, b"phala/cluster/key");
     #[derive(Encode, Decode, Clone, Debug, PartialEq, Eq, TypeInfo)]
     pub enum ClusterKeyDistribution<BlockNumber> {
