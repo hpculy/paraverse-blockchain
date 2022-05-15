@@ -47,9 +47,9 @@ pub mod pallet {
 
 		type UnixTime: UnixTime;
 
-		/// Enable OptOut Attestation, SHOULD BE SET TO FALSE ON PRODUCTION !!!
+		/// Enable None Attestation, SHOULD BE SET TO FALSE ON PRODUCTION !!!
 		#[pallet::constant]
-		type OptOutAttestationEnabled: Get<bool>;
+		type NoneAttestationEnabled: Get<bool>;
 
 		/// Verify attestation
 		///
@@ -146,7 +146,7 @@ pub mod pallet {
 		InvalidInput,
 		InvalidBenchReport,
 		WorkerNotFound,
-		OptOutDisabled,
+		NoneAttestationDisabled,
 		// Gatekeeper related
 		InvalidGatekeeper,
 		InvalidMasterPubkey,
@@ -298,7 +298,7 @@ pub mod pallet {
 				now,
 				T::VerifyPRuntime::get(),
 				PRuntimeAllowList::<T>::get(),
-				T::OptOutAttestationEnabled::get(),
+				T::NoneAttestationEnabled::get(),
 			)
 			.map_err(Into::<Error<T>>::into)?;
 
@@ -690,7 +690,7 @@ pub mod pallet {
 				AttestationError::OutdatedIASReport => Self::OutdatedIASReport,
 				AttestationError::UnknownQuoteBodyFormat => Self::UnknownQuoteBodyFormat,
 				AttestationError::InvalidUserDataHash => Self::InvalidRuntimeInfoHash,
-				AttestationError::OptOutDisabled => Self::OptOutDisabled,
+				AttestationError::NoneAttestationDisabled => Self::NoneAttestationDisabled,
 			}
 		}
 	}
@@ -726,7 +726,7 @@ pub mod pallet {
 							features: vec![4, 1],
 							operator: Some(1),
 						},
-						AttestationReport::OptOut
+						AttestationReport::None
 					),
 					Error::<Test>::GenesisBlockHashRejected
 				);
@@ -743,7 +743,7 @@ pub mod pallet {
 						features: vec![4, 1],
 						operator: Some(1),
 					},
-					AttestationReport::OptOut,
+					AttestationReport::None,
 				));
 				let worker = Workers::<Test>::get(worker_pubkey(1)).unwrap();
 				assert_eq!(worker.operator, Some(1));
@@ -760,7 +760,7 @@ pub mod pallet {
 						features: vec![4, 1],
 						operator: Some(2),
 					},
-					AttestationReport::OptOut,
+					AttestationReport::None,
 				));
 				let worker = Workers::<Test>::get(worker_pubkey(1)).unwrap();
 				assert_eq!(worker.last_updated, 100);
