@@ -24,7 +24,7 @@ pub use phactory_api::prpc::{GatekeeperRole, GatekeeperStatus};
 use phala_crypto::{
     aead,
     ecdh::{self, EcdhKey},
-    sr25519::KDF,
+    sr25519::{Signature, Signing, KDF},
 };
 use phala_mq::{
     traits::MessageChannel, BadOrigin, ContractId, MessageDispatcher, MessageOrigin,
@@ -485,6 +485,12 @@ impl<Platform: pal::Platform> System<Platform> {
             now_ms: 0,
             sidevm_spawner: create_sidevm_service(),
         }
+    }
+
+    pub fn get_worker_key_challenge(&self) -> (chain::BlockNumber, Signature) {
+        let block_number = self.block_number;
+        let signature = self.identity_key.sign_data(&block_number.to_be_bytes());
+        (block_number, signature)
     }
 
     pub fn make_query(
