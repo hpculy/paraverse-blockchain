@@ -51,13 +51,13 @@ use phala_types::WorkerRegistrationInfo;
 use std::time::Instant;
 use types::Error;
 
+pub use chain::BlockNumber;
 pub use contracts::pink;
 pub use prpc_service::dispatch_prpc_request;
 pub use side_task::SideTaskManager;
 pub use storage::{Storage, StorageExt};
 pub use system::gk;
 pub use types::BlockInfo;
-pub use chain::BlockNumber;
 
 pub mod benchmark;
 
@@ -579,7 +579,6 @@ fn generate_random_iv() -> aead::IV {
     nonce_vec
 }
 
-#[allow(dead_code)]
 fn generate_random_info() -> [u8; 32] {
     let mut nonce_vec = [0u8; 32];
     let rand = ring::rand::SystemRandom::new();
