@@ -109,6 +109,12 @@ struct Args {
     )]
     pruntime_endpoint: String,
 
+    #[clap(
+        long,
+        help = "pRuntime http endpoint to handover the key. The handover will only happen when the old pRuntime is synced."
+    )]
+    next_pruntime_endpoint: Option<String>,
+
     #[clap(default_value = "", long, help = "notify endpoint")]
     notify_endpoint: String,
 
@@ -1022,6 +1028,7 @@ async fn bridge(
     let mut pruntime_initialized = false;
     let mut pruntime_new_init = false;
     let mut initial_sync_finished = false;
+    let mut worker_key_handover_done = false;
 
     // Try to initialize pRuntime and register on-chain
     let info = pr.get_info(()).await?;
@@ -1279,6 +1286,39 @@ async fn bridge(
             }
             flags.restart_failure_count = 0;
             info!("Waiting for new blocks");
+
+            // Launch key handover if required only when the old pRuntime is up-to-date
+            if args.next_pruntime_endpoint.is_some() && !worker_key_handover_done {
+                let next_pr = pruntime_client::new_pruntime_client(
+                    args.next_pruntime_endpoint.clone().unwrap(),
+                );
+                // init the next pRuntime to generate a temporary worker key for encrypted key handover
+                init_runtime(
+                    &Option::<headers_cache::Client>::None,
+                    &api,
+                    &para_api,
+                    &next_pr,
+                    true,
+                    false,
+                    &"",
+                    None,
+                    args.parachain,
+                    0,
+                )
+                .await?;
+
+                let challenge = pr.get_worker_key_challenge(()).await?;
+                let response = next_pr.handle_worker_key_challenge(challenge).await?;
+                let encrypted_key = pr.get_worker_key(response).await?;
+                worker_key_handover_done = next_pr.receive_worker_key(encrypted_key).await?;
+
+                if worker_key_handover_done {
+                    info!("Worker key handover done, the new pRuntime is ready to go");
+                } else {
+                    info!("Worker key handover failed, will retry after next syncing batch");
+                }
+            }
+
             sleep(Duration::from_millis(args.dev_wait_block_ms)).await;
             continue;
         }

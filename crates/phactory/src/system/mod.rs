@@ -35,9 +35,10 @@ use phala_types::{
     contract::{self, messaging::ContractOperation, CodeIndex},
     messaging::{
         AeadIV, BatchDispatchClusterKeyEvent, BatchRotateMasterKeyEvent, ClusterKeyDistribution,
-        DispatchMasterKeyEvent, GatekeeperChange, GatekeeperLaunch, HeartbeatChallenge,
-        KeyDistribution, MiningReportEvent, NewGatekeeperEvent, RemoveGatekeeperEvent,
-        RotateMasterKeyEvent, SystemEvent, WorkerClusterReport, WorkerContractReport, WorkerEvent,
+        DispatchMasterKeyEvent, EncryptedKey, GatekeeperChange, GatekeeperLaunch,
+        HeartbeatChallenge, KeyDistribution, MiningReportEvent, NewGatekeeperEvent,
+        RemoveGatekeeperEvent, RotateMasterKeyEvent, SystemEvent, WorkerClusterReport,
+        WorkerContractReport, WorkerEvent,
     },
     EcdhPublicKey, WorkerKeyChallenge, WorkerKeyChallengePayload, WorkerPublicKey,
 };
@@ -515,6 +516,17 @@ impl<Platform: pal::Platform> System<Platform> {
         self.last_challenge = None;
         self.identity_key
             .verify_data(&challenge.signature, &challenge.payload.encode())
+    }
+
+    pub fn update_worker_key(&mut self, encrypted_key: EncryptedKey) {
+        let key = self.decrypt_key_from(
+            &encrypted_key.ecdh_pubkey,
+            &encrypted_key.encrypted_key,
+            &encrypted_key.iv,
+        );
+
+        self.identity_key = WorkerIdentityKey(key.clone());
+        self.ecdh_key = key.derive_ecdh_key().expect("Invalid worker key handover");
     }
 
     pub fn make_query(
