@@ -1810,7 +1810,11 @@ dependencies = [
 [[package]]
 name = "frame-election-provider-solution-type"
 version = "4.0.0-dev"
+<<<<<<< HEAD
 source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24#257cdb558c0decbd1da756b43288d06d02ff77c7"
+=======
+source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.23#76522d7937ba94ff1becef4e4e3ca78e3e1de341"
+>>>>>>> e88a9c8d (e2e: update pruntime ports)
 dependencies = [
  "proc-macro-crate",
  "proc-macro2 1.0.39",
@@ -1821,7 +1825,11 @@ dependencies = [
 [[package]]
 name = "frame-election-provider-support"
 version = "4.0.0-dev"
+<<<<<<< HEAD
 source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24#257cdb558c0decbd1da756b43288d06d02ff77c7"
+=======
+source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.23#76522d7937ba94ff1becef4e4e3ca78e3e1de341"
+>>>>>>> e88a9c8d (e2e: update pruntime ports)
 dependencies = [
  "frame-election-provider-solution-type",
  "frame-support 4.0.0-dev (git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24)",
@@ -1837,7 +1845,11 @@ dependencies = [
 [[package]]
 name = "frame-executive"
 version = "4.0.0-dev"
+<<<<<<< HEAD
 source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24#257cdb558c0decbd1da756b43288d06d02ff77c7"
+=======
+source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.23#76522d7937ba94ff1becef4e4e3ca78e3e1de341"
+>>>>>>> e88a9c8d (e2e: update pruntime ports)
 dependencies = [
  "frame-support 4.0.0-dev (git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24)",
  "frame-system 4.0.0-dev (git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24)",
@@ -1974,6 +1986,7 @@ dependencies = [
 name = "frame-support-procedural-tools-derive"
 version = "3.0.0"
 source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.23#76522d7937ba94ff1becef4e4e3ca78e3e1de341"
+<<<<<<< HEAD
 dependencies = [
  "proc-macro2 1.0.39",
  "quote 1.0.18",
@@ -1984,6 +1997,8 @@ dependencies = [
 name = "frame-support-procedural-tools-derive"
 version = "3.0.0"
 source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24#257cdb558c0decbd1da756b43288d06d02ff77c7"
+=======
+>>>>>>> e88a9c8d (e2e: update pruntime ports)
 dependencies = [
  "proc-macro2 1.0.39",
  "quote 1.0.18",
@@ -2027,7 +2042,11 @@ dependencies = [
 [[package]]
 name = "frame-system-rpc-runtime-api"
 version = "4.0.0-dev"
+<<<<<<< HEAD
 source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24#257cdb558c0decbd1da756b43288d06d02ff77c7"
+=======
+source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.23#76522d7937ba94ff1becef4e4e3ca78e3e1de341"
+>>>>>>> e88a9c8d (e2e: update pruntime ports)
 dependencies = [
  "parity-scale-codec",
  "sp-api 4.0.0-dev (git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24)",
@@ -2036,7 +2055,11 @@ dependencies = [
 [[package]]
 name = "frame-try-runtime"
 version = "0.10.0-dev"
+<<<<<<< HEAD
 source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24#257cdb558c0decbd1da756b43288d06d02ff77c7"
+=======
+source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.23#76522d7937ba94ff1becef4e4e3ca78e3e1de341"
+>>>>>>> e88a9c8d (e2e: update pruntime ports)
 dependencies = [
  "frame-support 4.0.0-dev (git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24)",
  "sp-api 4.0.0-dev (git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24)",
@@ -3375,7 +3398,11 @@ dependencies = [
 [[package]]
 name = "node-primitives"
 version = "2.0.0"
+<<<<<<< HEAD
 source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24#257cdb558c0decbd1da756b43288d06d02ff77c7"
+=======
+source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.23#76522d7937ba94ff1becef4e4e3ca78e3e1de341"
+>>>>>>> e88a9c8d (e2e: update pruntime ports)
 dependencies = [
  "frame-system 4.0.0-dev (git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24)",
  "parity-scale-codec",
@@ -3584,7 +3611,11 @@ dependencies = [
 [[package]]
 name = "pallet-authority-discovery"
 version = "4.0.0-dev"
+<<<<<<< HEAD
 source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24#257cdb558c0decbd1da756b43288d06d02ff77c7"
+=======
+source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.23#76522d7937ba94ff1becef4e4e3ca78e3e1de341"
+>>>>>>> e88a9c8d (e2e: update pruntime ports)
 dependencies = [
  "frame-support 4.0.0-dev (git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24)",
  "frame-system 4.0.0-dev (git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24)",
@@ -3600,7 +3631,11 @@ dependencies = [
 [[package]]
 name = "pallet-authorship"
 version = "4.0.0-dev"
+<<<<<<< HEAD
 source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24#257cdb558c0decbd1da756b43288d06d02ff77c7"
+=======
+source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.23#76522d7937ba94ff1becef4e4e3ca78e3e1de341"
+>>>>>>> e88a9c8d (e2e: update pruntime ports)
 dependencies = [
  "frame-support 4.0.0-dev (git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24)",
  "frame-system 4.0.0-dev (git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24)",
@@ -3615,7 +3650,11 @@ dependencies = [
 [[package]]
 name = "pallet-babe"
 version = "4.0.0-dev"
+<<<<<<< HEAD
 source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24#257cdb558c0decbd1da756b43288d06d02ff77c7"
+=======
+source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.23#76522d7937ba94ff1becef4e4e3ca78e3e1de341"
+>>>>>>> e88a9c8d (e2e: update pruntime ports)
 dependencies = [
  "frame-benchmarking 4.0.0-dev (git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24)",
  "frame-support 4.0.0-dev (git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24)",
@@ -3639,7 +3678,11 @@ dependencies = [
 [[package]]
 name = "pallet-bags-list"
 version = "4.0.0-dev"
+<<<<<<< HEAD
 source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24#257cdb558c0decbd1da756b43288d06d02ff77c7"
+=======
+source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.23#76522d7937ba94ff1becef4e4e3ca78e3e1de341"
+>>>>>>> e88a9c8d (e2e: update pruntime ports)
 dependencies = [
  "frame-election-provider-support",
  "frame-support 4.0.0-dev (git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24)",
@@ -3684,7 +3727,11 @@ dependencies = [
 [[package]]
 name = "pallet-bounties"
 version = "4.0.0-dev"
+<<<<<<< HEAD
 source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24#257cdb558c0decbd1da756b43288d06d02ff77c7"
+=======
+source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.23#76522d7937ba94ff1becef4e4e3ca78e3e1de341"
+>>>>>>> e88a9c8d (e2e: update pruntime ports)
 dependencies = [
  "frame-support 4.0.0-dev (git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24)",
  "frame-system 4.0.0-dev (git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24)",
@@ -3701,7 +3748,11 @@ dependencies = [
 [[package]]
 name = "pallet-child-bounties"
 version = "4.0.0-dev"
+<<<<<<< HEAD
 source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24#257cdb558c0decbd1da756b43288d06d02ff77c7"
+=======
+source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.23#76522d7937ba94ff1becef4e4e3ca78e3e1de341"
+>>>>>>> e88a9c8d (e2e: update pruntime ports)
 dependencies = [
  "frame-support 4.0.0-dev (git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24)",
  "frame-system 4.0.0-dev (git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24)",
@@ -3719,7 +3770,11 @@ dependencies = [
 [[package]]
 name = "pallet-collective"
 version = "4.0.0-dev"
+<<<<<<< HEAD
 source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24#257cdb558c0decbd1da756b43288d06d02ff77c7"
+=======
+source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.23#76522d7937ba94ff1becef4e4e3ca78e3e1de341"
+>>>>>>> e88a9c8d (e2e: update pruntime ports)
 dependencies = [
  "frame-benchmarking 4.0.0-dev (git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24)",
  "frame-support 4.0.0-dev (git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24)",
@@ -3736,7 +3791,11 @@ dependencies = [
 [[package]]
 name = "pallet-contracts"
 version = "4.0.0-dev"
+<<<<<<< HEAD
 source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24#257cdb558c0decbd1da756b43288d06d02ff77c7"
+=======
+source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.23#76522d7937ba94ff1becef4e4e3ca78e3e1de341"
+>>>>>>> e88a9c8d (e2e: update pruntime ports)
 dependencies = [
  "bitflags",
  "frame-benchmarking 4.0.0-dev (git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24)",
@@ -3762,7 +3821,11 @@ dependencies = [
 [[package]]
 name = "pallet-contracts-primitives"
 version = "6.0.0"
+<<<<<<< HEAD
 source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24#257cdb558c0decbd1da756b43288d06d02ff77c7"
+=======
+source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.23#76522d7937ba94ff1becef4e4e3ca78e3e1de341"
+>>>>>>> e88a9c8d (e2e: update pruntime ports)
 dependencies = [
  "bitflags",
  "parity-scale-codec",
@@ -3777,7 +3840,11 @@ dependencies = [
 [[package]]
 name = "pallet-contracts-proc-macro"
 version = "4.0.0-dev"
+<<<<<<< HEAD
 source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24#257cdb558c0decbd1da756b43288d06d02ff77c7"
+=======
+source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.23#76522d7937ba94ff1becef4e4e3ca78e3e1de341"
+>>>>>>> e88a9c8d (e2e: update pruntime ports)
 dependencies = [
  "proc-macro2 1.0.39",
  "quote 1.0.18",
@@ -3787,7 +3854,11 @@ dependencies = [
 [[package]]
 name = "pallet-democracy"
 version = "4.0.0-dev"
+<<<<<<< HEAD
 source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24#257cdb558c0decbd1da756b43288d06d02ff77c7"
+=======
+source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.23#76522d7937ba94ff1becef4e4e3ca78e3e1de341"
+>>>>>>> e88a9c8d (e2e: update pruntime ports)
 dependencies = [
  "frame-benchmarking 4.0.0-dev (git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24)",
  "frame-support 4.0.0-dev (git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24)",
@@ -3803,7 +3874,11 @@ dependencies = [
 [[package]]
 name = "pallet-election-provider-multi-phase"
 version = "4.0.0-dev"
+<<<<<<< HEAD
 source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24#257cdb558c0decbd1da756b43288d06d02ff77c7"
+=======
+source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.23#76522d7937ba94ff1becef4e4e3ca78e3e1de341"
+>>>>>>> e88a9c8d (e2e: update pruntime ports)
 dependencies = [
  "frame-benchmarking 4.0.0-dev (git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24)",
  "frame-election-provider-support",
@@ -3826,7 +3901,11 @@ dependencies = [
 [[package]]
 name = "pallet-elections-phragmen"
 version = "5.0.0-dev"
+<<<<<<< HEAD
 source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24#257cdb558c0decbd1da756b43288d06d02ff77c7"
+=======
+source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.23#76522d7937ba94ff1becef4e4e3ca78e3e1de341"
+>>>>>>> e88a9c8d (e2e: update pruntime ports)
 dependencies = [
  "frame-support 4.0.0-dev (git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24)",
  "frame-system 4.0.0-dev (git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24)",
@@ -3843,7 +3922,11 @@ dependencies = [
 [[package]]
 name = "pallet-grandpa"
 version = "4.0.0-dev"
+<<<<<<< HEAD
 source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24#257cdb558c0decbd1da756b43288d06d02ff77c7"
+=======
+source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.23#76522d7937ba94ff1becef4e4e3ca78e3e1de341"
+>>>>>>> e88a9c8d (e2e: update pruntime ports)
 dependencies = [
  "frame-benchmarking 4.0.0-dev (git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24)",
  "frame-support 4.0.0-dev (git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24)",
@@ -3866,7 +3949,11 @@ dependencies = [
 [[package]]
 name = "pallet-identity"
 version = "4.0.0-dev"
+<<<<<<< HEAD
 source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24#257cdb558c0decbd1da756b43288d06d02ff77c7"
+=======
+source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.23#76522d7937ba94ff1becef4e4e3ca78e3e1de341"
+>>>>>>> e88a9c8d (e2e: update pruntime ports)
 dependencies = [
  "enumflags2",
  "frame-benchmarking 4.0.0-dev (git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24)",
@@ -3882,7 +3969,11 @@ dependencies = [
 [[package]]
 name = "pallet-im-online"
 version = "4.0.0-dev"
+<<<<<<< HEAD
 source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24#257cdb558c0decbd1da756b43288d06d02ff77c7"
+=======
+source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.23#76522d7937ba94ff1becef4e4e3ca78e3e1de341"
+>>>>>>> e88a9c8d (e2e: update pruntime ports)
 dependencies = [
  "frame-support 4.0.0-dev (git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24)",
  "frame-system 4.0.0-dev (git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24)",
@@ -3901,7 +3992,11 @@ dependencies = [
 [[package]]
 name = "pallet-indices"
 version = "4.0.0-dev"
+<<<<<<< HEAD
 source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24#257cdb558c0decbd1da756b43288d06d02ff77c7"
+=======
+source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.23#76522d7937ba94ff1becef4e4e3ca78e3e1de341"
+>>>>>>> e88a9c8d (e2e: update pruntime ports)
 dependencies = [
  "frame-support 4.0.0-dev (git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24)",
  "frame-system 4.0.0-dev (git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24)",
@@ -3917,7 +4012,11 @@ dependencies = [
 [[package]]
 name = "pallet-lottery"
 version = "4.0.0-dev"
+<<<<<<< HEAD
 source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24#257cdb558c0decbd1da756b43288d06d02ff77c7"
+=======
+source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.23#76522d7937ba94ff1becef4e4e3ca78e3e1de341"
+>>>>>>> e88a9c8d (e2e: update pruntime ports)
 dependencies = [
  "frame-support 4.0.0-dev (git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24)",
  "frame-system 4.0.0-dev (git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24)",
@@ -3930,7 +4029,11 @@ dependencies = [
 [[package]]
 name = "pallet-membership"
 version = "4.0.0-dev"
+<<<<<<< HEAD
 source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24#257cdb558c0decbd1da756b43288d06d02ff77c7"
+=======
+source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.23#76522d7937ba94ff1becef4e4e3ca78e3e1de341"
+>>>>>>> e88a9c8d (e2e: update pruntime ports)
 dependencies = [
  "frame-benchmarking 4.0.0-dev (git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24)",
  "frame-support 4.0.0-dev (git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24)",
@@ -3955,7 +4058,11 @@ dependencies = [
 [[package]]
 name = "pallet-multisig"
 version = "4.0.0-dev"
+<<<<<<< HEAD
 source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24#257cdb558c0decbd1da756b43288d06d02ff77c7"
+=======
+source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.23#76522d7937ba94ff1becef4e4e3ca78e3e1de341"
+>>>>>>> e88a9c8d (e2e: update pruntime ports)
 dependencies = [
  "frame-support 4.0.0-dev (git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24)",
  "frame-system 4.0.0-dev (git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24)",
@@ -3969,7 +4076,11 @@ dependencies = [
 [[package]]
 name = "pallet-nomination-pools"
 version = "1.0.0"
+<<<<<<< HEAD
 source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24#257cdb558c0decbd1da756b43288d06d02ff77c7"
+=======
+source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.23#76522d7937ba94ff1becef4e4e3ca78e3e1de341"
+>>>>>>> e88a9c8d (e2e: update pruntime ports)
 dependencies = [
  "frame-support 4.0.0-dev (git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24)",
  "frame-system 4.0.0-dev (git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24)",
@@ -3985,7 +4096,11 @@ dependencies = [
 [[package]]
 name = "pallet-offences"
 version = "4.0.0-dev"
+<<<<<<< HEAD
 source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24#257cdb558c0decbd1da756b43288d06d02ff77c7"
+=======
+source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.23#76522d7937ba94ff1becef4e4e3ca78e3e1de341"
+>>>>>>> e88a9c8d (e2e: update pruntime ports)
 dependencies = [
  "frame-support 4.0.0-dev (git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24)",
  "frame-system 4.0.0-dev (git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24)",
@@ -4002,7 +4117,11 @@ dependencies = [
 [[package]]
 name = "pallet-preimage"
 version = "4.0.0-dev"
+<<<<<<< HEAD
 source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24#257cdb558c0decbd1da756b43288d06d02ff77c7"
+=======
+source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.23#76522d7937ba94ff1becef4e4e3ca78e3e1de341"
+>>>>>>> e88a9c8d (e2e: update pruntime ports)
 dependencies = [
  "frame-benchmarking 4.0.0-dev (git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24)",
  "frame-support 4.0.0-dev (git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24)",
@@ -4018,7 +4137,11 @@ dependencies = [
 [[package]]
 name = "pallet-proxy"
 version = "4.0.0-dev"
+<<<<<<< HEAD
 source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24#257cdb558c0decbd1da756b43288d06d02ff77c7"
+=======
+source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.23#76522d7937ba94ff1becef4e4e3ca78e3e1de341"
+>>>>>>> e88a9c8d (e2e: update pruntime ports)
 dependencies = [
  "frame-support 4.0.0-dev (git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24)",
  "frame-system 4.0.0-dev (git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24)",
@@ -4032,7 +4155,11 @@ dependencies = [
 [[package]]
 name = "pallet-randomness-collective-flip"
 version = "4.0.0-dev"
+<<<<<<< HEAD
 source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24#257cdb558c0decbd1da756b43288d06d02ff77c7"
+=======
+source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.23#76522d7937ba94ff1becef4e4e3ca78e3e1de341"
+>>>>>>> e88a9c8d (e2e: update pruntime ports)
 dependencies = [
  "frame-support 4.0.0-dev (git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24)",
  "frame-system 4.0.0-dev (git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24)",
@@ -4046,7 +4173,11 @@ dependencies = [
 [[package]]
 name = "pallet-recovery"
 version = "4.0.0-dev"
+<<<<<<< HEAD
 source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24#257cdb558c0decbd1da756b43288d06d02ff77c7"
+=======
+source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.23#76522d7937ba94ff1becef4e4e3ca78e3e1de341"
+>>>>>>> e88a9c8d (e2e: update pruntime ports)
 dependencies = [
  "frame-benchmarking 4.0.0-dev (git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24)",
  "frame-support 4.0.0-dev (git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24)",
@@ -4115,9 +4246,69 @@ dependencies = [
 ]
 
 [[package]]
+name = "pallet-rmrk-core"
+version = "0.0.1"
+source = "git+https://github.com/Phala-Network/rmrk-substrate?branch=polkadot-v0.9.23#e6fb5efa68e2f243214c3ca08419802f7103d7d9"
+dependencies = [
+ "frame-benchmarking",
+ "frame-support",
+ "frame-system",
+ "pallet-balances",
+ "pallet-uniques",
+ "parity-scale-codec",
+ "rmrk-traits",
+ "scale-info",
+ "serde",
+ "sp-runtime",
+ "sp-std",
+]
+
+[[package]]
+name = "pallet-rmrk-equip"
+version = "0.0.1"
+source = "git+https://github.com/Phala-Network/rmrk-substrate?branch=polkadot-v0.9.23#e6fb5efa68e2f243214c3ca08419802f7103d7d9"
+dependencies = [
+ "frame-benchmarking",
+ "frame-support",
+ "frame-system",
+ "pallet-balances",
+ "pallet-rmrk-core",
+ "pallet-uniques",
+ "parity-scale-codec",
+ "rmrk-traits",
+ "scale-info",
+ "serde",
+ "sp-runtime",
+ "sp-std",
+]
+
+[[package]]
+name = "pallet-rmrk-market"
+version = "0.0.1"
+source = "git+https://github.com/Phala-Network/rmrk-substrate?branch=polkadot-v0.9.23#e6fb5efa68e2f243214c3ca08419802f7103d7d9"
+dependencies = [
+ "frame-benchmarking",
+ "frame-support",
+ "frame-system",
+ "pallet-balances",
+ "pallet-rmrk-core",
+ "pallet-uniques",
+ "parity-scale-codec",
+ "rmrk-traits",
+ "scale-info",
+ "serde",
+ "sp-runtime",
+ "sp-std",
+]
+
+[[package]]
 name = "pallet-scheduler"
 version = "4.0.0-dev"
+<<<<<<< HEAD
 source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24#257cdb558c0decbd1da756b43288d06d02ff77c7"
+=======
+source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.23#76522d7937ba94ff1becef4e4e3ca78e3e1de341"
+>>>>>>> e88a9c8d (e2e: update pruntime ports)
 dependencies = [
  "frame-benchmarking 4.0.0-dev (git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24)",
  "frame-support 4.0.0-dev (git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24)",
@@ -4133,7 +4324,11 @@ dependencies = [
 [[package]]
 name = "pallet-session"
 version = "4.0.0-dev"
+<<<<<<< HEAD
 source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24#257cdb558c0decbd1da756b43288d06d02ff77c7"
+=======
+source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.23#76522d7937ba94ff1becef4e4e3ca78e3e1de341"
+>>>>>>> e88a9c8d (e2e: update pruntime ports)
 dependencies = [
  "frame-support 4.0.0-dev (git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24)",
  "frame-system 4.0.0-dev (git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24)",
@@ -4154,7 +4349,11 @@ dependencies = [
 [[package]]
 name = "pallet-society"
 version = "4.0.0-dev"
+<<<<<<< HEAD
 source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24#257cdb558c0decbd1da756b43288d06d02ff77c7"
+=======
+source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.23#76522d7937ba94ff1becef4e4e3ca78e3e1de341"
+>>>>>>> e88a9c8d (e2e: update pruntime ports)
 dependencies = [
  "frame-support 4.0.0-dev (git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24)",
  "frame-system 4.0.0-dev (git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24)",
@@ -4168,7 +4367,11 @@ dependencies = [
 [[package]]
 name = "pallet-staking"
 version = "4.0.0-dev"
+<<<<<<< HEAD
 source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24#257cdb558c0decbd1da756b43288d06d02ff77c7"
+=======
+source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.23#76522d7937ba94ff1becef4e4e3ca78e3e1de341"
+>>>>>>> e88a9c8d (e2e: update pruntime ports)
 dependencies = [
  "frame-election-provider-support",
  "frame-support 4.0.0-dev (git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24)",
@@ -4189,7 +4392,11 @@ dependencies = [
 [[package]]
 name = "pallet-staking-reward-curve"
 version = "4.0.0-dev"
+<<<<<<< HEAD
 source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24#257cdb558c0decbd1da756b43288d06d02ff77c7"
+=======
+source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.23#76522d7937ba94ff1becef4e4e3ca78e3e1de341"
+>>>>>>> e88a9c8d (e2e: update pruntime ports)
 dependencies = [
  "proc-macro-crate",
  "proc-macro2 1.0.39",
@@ -4200,7 +4407,11 @@ dependencies = [
 [[package]]
 name = "pallet-sudo"
 version = "4.0.0-dev"
+<<<<<<< HEAD
 source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24#257cdb558c0decbd1da756b43288d06d02ff77c7"
+=======
+source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.23#76522d7937ba94ff1becef4e4e3ca78e3e1de341"
+>>>>>>> e88a9c8d (e2e: update pruntime ports)
 dependencies = [
  "frame-support 4.0.0-dev (git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24)",
  "frame-system 4.0.0-dev (git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24)",
@@ -4214,7 +4425,11 @@ dependencies = [
 [[package]]
 name = "pallet-timestamp"
 version = "4.0.0-dev"
+<<<<<<< HEAD
 source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24#257cdb558c0decbd1da756b43288d06d02ff77c7"
+=======
+source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.23#76522d7937ba94ff1becef4e4e3ca78e3e1de341"
+>>>>>>> e88a9c8d (e2e: update pruntime ports)
 dependencies = [
  "frame-benchmarking 4.0.0-dev (git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24)",
  "frame-support 4.0.0-dev (git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24)",
@@ -4231,7 +4446,11 @@ dependencies = [
 [[package]]
 name = "pallet-tips"
 version = "4.0.0-dev"
+<<<<<<< HEAD
 source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24#257cdb558c0decbd1da756b43288d06d02ff77c7"
+=======
+source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.23#76522d7937ba94ff1becef4e4e3ca78e3e1de341"
+>>>>>>> e88a9c8d (e2e: update pruntime ports)
 dependencies = [
  "frame-support 4.0.0-dev (git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24)",
  "frame-system 4.0.0-dev (git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24)",
@@ -4249,7 +4468,11 @@ dependencies = [
 [[package]]
 name = "pallet-transaction-payment"
 version = "4.0.0-dev"
+<<<<<<< HEAD
 source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24#257cdb558c0decbd1da756b43288d06d02ff77c7"
+=======
+source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.23#76522d7937ba94ff1becef4e4e3ca78e3e1de341"
+>>>>>>> e88a9c8d (e2e: update pruntime ports)
 dependencies = [
  "frame-support 4.0.0-dev (git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24)",
  "frame-system 4.0.0-dev (git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24)",
@@ -4265,7 +4488,11 @@ dependencies = [
 [[package]]
 name = "pallet-transaction-payment-rpc-runtime-api"
 version = "4.0.0-dev"
+<<<<<<< HEAD
 source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24#257cdb558c0decbd1da756b43288d06d02ff77c7"
+=======
+source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.23#76522d7937ba94ff1becef4e4e3ca78e3e1de341"
+>>>>>>> e88a9c8d (e2e: update pruntime ports)
 dependencies = [
  "pallet-transaction-payment",
  "parity-scale-codec",
@@ -4276,7 +4503,11 @@ dependencies = [
 [[package]]
 name = "pallet-treasury"
 version = "4.0.0-dev"
+<<<<<<< HEAD
 source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24#257cdb558c0decbd1da756b43288d06d02ff77c7"
+=======
+source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.23#76522d7937ba94ff1becef4e4e3ca78e3e1de341"
+>>>>>>> e88a9c8d (e2e: update pruntime ports)
 dependencies = [
  "frame-support 4.0.0-dev (git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24)",
  "frame-system 4.0.0-dev (git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24)",
@@ -4305,9 +4536,28 @@ dependencies = [
 ]
 
 [[package]]
+name = "pallet-uniques"
+version = "4.0.0-dev"
+source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.23#76522d7937ba94ff1becef4e4e3ca78e3e1de341"
+dependencies = [
+ "frame-benchmarking",
+ "frame-support",
+ "frame-system",
+ "log",
+ "parity-scale-codec",
+ "scale-info",
+ "sp-runtime",
+ "sp-std",
+]
+
+[[package]]
 name = "pallet-utility"
 version = "4.0.0-dev"
+<<<<<<< HEAD
 source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24#257cdb558c0decbd1da756b43288d06d02ff77c7"
+=======
+source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.23#76522d7937ba94ff1becef4e4e3ca78e3e1de341"
+>>>>>>> e88a9c8d (e2e: update pruntime ports)
 dependencies = [
  "frame-support 4.0.0-dev (git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24)",
  "frame-system 4.0.0-dev (git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24)",
@@ -4322,7 +4572,11 @@ dependencies = [
 [[package]]
 name = "pallet-vesting"
 version = "4.0.0-dev"
+<<<<<<< HEAD
 source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24#257cdb558c0decbd1da756b43288d06d02ff77c7"
+=======
+source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.23#76522d7937ba94ff1becef4e4e3ca78e3e1de341"
+>>>>>>> e88a9c8d (e2e: update pruntime ports)
 dependencies = [
  "frame-support 4.0.0-dev (git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24)",
  "frame-system 4.0.0-dev (git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24)",
@@ -5797,6 +6051,7 @@ name = "rmrk-traits"
 version = "0.0.1"
 source = "git+https://github.com/Phala-Network/rmrk-substrate?branch=polkadot-v0.9.23#e6fb5efa68e2f243214c3ca08419802f7103d7d9"
 dependencies = [
+<<<<<<< HEAD
  "frame-benchmarking 4.0.0-dev (git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.23)",
  "frame-support 4.0.0-dev (git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.23)",
  "frame-system 4.0.0-dev (git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.23)",
@@ -5806,6 +6061,17 @@ dependencies = [
  "serde",
  "sp-runtime 6.0.0 (git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.23)",
  "sp-std 4.0.0 (git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.23)",
+=======
+ "frame-benchmarking",
+ "frame-support",
+ "frame-system",
+ "pallet-balances",
+ "parity-scale-codec",
+ "scale-info",
+ "serde",
+ "sp-runtime",
+ "sp-std",
+>>>>>>> e88a9c8d (e2e: update pruntime ports)
 ]
 
 [[package]]
@@ -6500,6 +6766,7 @@ dependencies = [
 name = "sp-api-proc-macro"
 version = "4.0.0-dev"
 source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.23#76522d7937ba94ff1becef4e4e3ca78e3e1de341"
+<<<<<<< HEAD
 dependencies = [
  "blake2",
  "proc-macro-crate",
@@ -6512,6 +6779,8 @@ dependencies = [
 name = "sp-api-proc-macro"
 version = "4.0.0-dev"
 source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24#257cdb558c0decbd1da756b43288d06d02ff77c7"
+=======
+>>>>>>> e88a9c8d (e2e: update pruntime ports)
 dependencies = [
  "blake2",
  "proc-macro-crate",
@@ -6579,7 +6848,11 @@ dependencies = [
 [[package]]
 name = "sp-authority-discovery"
 version = "4.0.0-dev"
+<<<<<<< HEAD
 source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24#257cdb558c0decbd1da756b43288d06d02ff77c7"
+=======
+source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.23#76522d7937ba94ff1becef4e4e3ca78e3e1de341"
+>>>>>>> e88a9c8d (e2e: update pruntime ports)
 dependencies = [
  "parity-scale-codec",
  "scale-info",
@@ -6592,7 +6865,11 @@ dependencies = [
 [[package]]
 name = "sp-authorship"
 version = "4.0.0-dev"
+<<<<<<< HEAD
 source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24#257cdb558c0decbd1da756b43288d06d02ff77c7"
+=======
+source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.23#76522d7937ba94ff1becef4e4e3ca78e3e1de341"
+>>>>>>> e88a9c8d (e2e: update pruntime ports)
 dependencies = [
  "async-trait",
  "parity-scale-codec",
@@ -6604,7 +6881,11 @@ dependencies = [
 [[package]]
 name = "sp-block-builder"
 version = "4.0.0-dev"
+<<<<<<< HEAD
 source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24#257cdb558c0decbd1da756b43288d06d02ff77c7"
+=======
+source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.23#76522d7937ba94ff1becef4e4e3ca78e3e1de341"
+>>>>>>> e88a9c8d (e2e: update pruntime ports)
 dependencies = [
  "parity-scale-codec",
  "sp-api 4.0.0-dev (git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24)",
@@ -6616,7 +6897,11 @@ dependencies = [
 [[package]]
 name = "sp-consensus"
 version = "0.10.0-dev"
+<<<<<<< HEAD
 source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24#257cdb558c0decbd1da756b43288d06d02ff77c7"
+=======
+source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.23#76522d7937ba94ff1becef4e4e3ca78e3e1de341"
+>>>>>>> e88a9c8d (e2e: update pruntime ports)
 dependencies = [
  "async-trait",
  "futures",
@@ -6635,7 +6920,11 @@ dependencies = [
 [[package]]
 name = "sp-consensus-babe"
 version = "0.10.0-dev"
+<<<<<<< HEAD
 source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24#257cdb558c0decbd1da756b43288d06d02ff77c7"
+=======
+source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.23#76522d7937ba94ff1becef4e4e3ca78e3e1de341"
+>>>>>>> e88a9c8d (e2e: update pruntime ports)
 dependencies = [
  "async-trait",
  "merlin",
@@ -6658,7 +6947,11 @@ dependencies = [
 [[package]]
 name = "sp-consensus-slots"
 version = "0.10.0-dev"
+<<<<<<< HEAD
 source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24#257cdb558c0decbd1da756b43288d06d02ff77c7"
+=======
+source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.23#76522d7937ba94ff1becef4e4e3ca78e3e1de341"
+>>>>>>> e88a9c8d (e2e: update pruntime ports)
 dependencies = [
  "parity-scale-codec",
  "scale-info",
@@ -6672,7 +6965,11 @@ dependencies = [
 [[package]]
 name = "sp-consensus-vrf"
 version = "0.10.0-dev"
+<<<<<<< HEAD
 source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24#257cdb558c0decbd1da756b43288d06d02ff77c7"
+=======
+source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.23#76522d7937ba94ff1becef4e4e3ca78e3e1de341"
+>>>>>>> e88a9c8d (e2e: update pruntime ports)
 dependencies = [
  "parity-scale-codec",
  "scale-info",
@@ -6828,6 +7125,7 @@ dependencies = [
 name = "sp-debug-derive"
 version = "4.0.0"
 source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.23#76522d7937ba94ff1becef4e4e3ca78e3e1de341"
+<<<<<<< HEAD
 dependencies = [
  "proc-macro2 1.0.39",
  "quote 1.0.18",
@@ -6838,6 +7136,8 @@ dependencies = [
 name = "sp-debug-derive"
 version = "4.0.0"
 source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24#257cdb558c0decbd1da756b43288d06d02ff77c7"
+=======
+>>>>>>> e88a9c8d (e2e: update pruntime ports)
 dependencies = [
  "proc-macro2 1.0.39",
  "quote 1.0.18",
@@ -6869,7 +7169,11 @@ dependencies = [
 [[package]]
 name = "sp-finality-grandpa"
 version = "4.0.0-dev"
+<<<<<<< HEAD
 source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24#257cdb558c0decbd1da756b43288d06d02ff77c7"
+=======
+source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.23#76522d7937ba94ff1becef4e4e3ca78e3e1de341"
+>>>>>>> e88a9c8d (e2e: update pruntime ports)
 dependencies = [
  "finality-grandpa",
  "log",
@@ -6965,7 +7269,11 @@ dependencies = [
 [[package]]
 name = "sp-keyring"
 version = "6.0.0"
+<<<<<<< HEAD
 source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24#257cdb558c0decbd1da756b43288d06d02ff77c7"
+=======
+source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.23#76522d7937ba94ff1becef4e4e3ca78e3e1de341"
+>>>>>>> e88a9c8d (e2e: update pruntime ports)
 dependencies = [
  "lazy_static",
  "sp-core 6.0.0 (git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24)",
@@ -7008,7 +7316,11 @@ dependencies = [
 [[package]]
 name = "sp-maybe-compressed-blob"
 version = "4.1.0-dev"
+<<<<<<< HEAD
 source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24#257cdb558c0decbd1da756b43288d06d02ff77c7"
+=======
+source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.23#76522d7937ba94ff1becef4e4e3ca78e3e1de341"
+>>>>>>> e88a9c8d (e2e: update pruntime ports)
 dependencies = [
  "thiserror",
  "zstd",
@@ -7017,7 +7329,11 @@ dependencies = [
 [[package]]
 name = "sp-npos-elections"
 version = "4.0.0-dev"
+<<<<<<< HEAD
 source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24#257cdb558c0decbd1da756b43288d06d02ff77c7"
+=======
+source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.23#76522d7937ba94ff1becef4e4e3ca78e3e1de341"
+>>>>>>> e88a9c8d (e2e: update pruntime ports)
 dependencies = [
  "parity-scale-codec",
  "scale-info",
@@ -7031,7 +7347,11 @@ dependencies = [
 [[package]]
 name = "sp-offchain"
 version = "4.0.0-dev"
+<<<<<<< HEAD
 source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24#257cdb558c0decbd1da756b43288d06d02ff77c7"
+=======
+source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.23#76522d7937ba94ff1becef4e4e3ca78e3e1de341"
+>>>>>>> e88a9c8d (e2e: update pruntime ports)
 dependencies = [
  "sp-api 4.0.0-dev (git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24)",
  "sp-core 6.0.0 (git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24)",
@@ -7042,6 +7362,7 @@ dependencies = [
 name = "sp-panic-handler"
 version = "4.0.0"
 source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.23#76522d7937ba94ff1becef4e4e3ca78e3e1de341"
+<<<<<<< HEAD
 dependencies = [
  "backtrace",
  "lazy_static",
@@ -7052,6 +7373,8 @@ dependencies = [
 name = "sp-panic-handler"
 version = "4.0.0"
 source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24#257cdb558c0decbd1da756b43288d06d02ff77c7"
+=======
+>>>>>>> e88a9c8d (e2e: update pruntime ports)
 dependencies = [
  "backtrace",
  "lazy_static",
@@ -7061,7 +7384,11 @@ dependencies = [
 [[package]]
 name = "sp-rpc"
 version = "6.0.0"
+<<<<<<< HEAD
 source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24#257cdb558c0decbd1da756b43288d06d02ff77c7"
+=======
+source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.23#76522d7937ba94ff1becef4e4e3ca78e3e1de341"
+>>>>>>> e88a9c8d (e2e: update pruntime ports)
 dependencies = [
  "rustc-hash",
  "serde",
@@ -7150,6 +7477,7 @@ dependencies = [
 name = "sp-runtime-interface-proc-macro"
 version = "5.0.0"
 source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.23#76522d7937ba94ff1becef4e4e3ca78e3e1de341"
+<<<<<<< HEAD
 dependencies = [
  "Inflector",
  "proc-macro-crate",
@@ -7162,6 +7490,8 @@ dependencies = [
 name = "sp-runtime-interface-proc-macro"
 version = "5.0.0"
 source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24#257cdb558c0decbd1da756b43288d06d02ff77c7"
+=======
+>>>>>>> e88a9c8d (e2e: update pruntime ports)
 dependencies = [
  "Inflector",
  "proc-macro-crate",
@@ -7173,7 +7503,11 @@ dependencies = [
 [[package]]
 name = "sp-sandbox"
 version = "0.10.0-dev"
+<<<<<<< HEAD
 source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24#257cdb558c0decbd1da756b43288d06d02ff77c7"
+=======
+source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.23#76522d7937ba94ff1becef4e4e3ca78e3e1de341"
+>>>>>>> e88a9c8d (e2e: update pruntime ports)
 dependencies = [
  "log",
  "parity-scale-codec",
@@ -7187,7 +7521,11 @@ dependencies = [
 [[package]]
 name = "sp-session"
 version = "4.0.0-dev"
+<<<<<<< HEAD
 source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24#257cdb558c0decbd1da756b43288d06d02ff77c7"
+=======
+source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.23#76522d7937ba94ff1becef4e4e3ca78e3e1de341"
+>>>>>>> e88a9c8d (e2e: update pruntime ports)
 dependencies = [
  "parity-scale-codec",
  "scale-info",
@@ -7268,11 +7606,14 @@ dependencies = [
 name = "sp-std"
 version = "4.0.0"
 source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.23#76522d7937ba94ff1becef4e4e3ca78e3e1de341"
+<<<<<<< HEAD
 
 [[package]]
 name = "sp-std"
 version = "4.0.0"
 source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24#257cdb558c0decbd1da756b43288d06d02ff77c7"
+=======
+>>>>>>> e88a9c8d (e2e: update pruntime ports)
 
 [[package]]
 name = "sp-storage"
@@ -7303,7 +7644,11 @@ dependencies = [
 [[package]]
 name = "sp-timestamp"
 version = "4.0.0-dev"
+<<<<<<< HEAD
 source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24#257cdb558c0decbd1da756b43288d06d02ff77c7"
+=======
+source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.23#76522d7937ba94ff1becef4e4e3ca78e3e1de341"
+>>>>>>> e88a9c8d (e2e: update pruntime ports)
 dependencies = [
  "async-trait",
  "futures-timer",
@@ -7343,7 +7688,11 @@ dependencies = [
 [[package]]
 name = "sp-transaction-pool"
 version = "4.0.0-dev"
+<<<<<<< HEAD
 source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24#257cdb558c0decbd1da756b43288d06d02ff77c7"
+=======
+source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.23#76522d7937ba94ff1becef4e4e3ca78e3e1de341"
+>>>>>>> e88a9c8d (e2e: update pruntime ports)
 dependencies = [
  "sp-api 4.0.0-dev (git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24)",
  "sp-runtime 6.0.0 (git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24)",
@@ -7419,6 +7768,7 @@ dependencies = [
 name = "sp-version-proc-macro"
 version = "4.0.0-dev"
 source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.23#76522d7937ba94ff1becef4e4e3ca78e3e1de341"
+<<<<<<< HEAD
 dependencies = [
  "parity-scale-codec",
  "proc-macro2 1.0.39",
@@ -7430,6 +7780,8 @@ dependencies = [
 name = "sp-version-proc-macro"
 version = "4.0.0-dev"
 source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24#257cdb558c0decbd1da756b43288d06d02ff77c7"
+=======
+>>>>>>> e88a9c8d (e2e: update pruntime ports)
 dependencies = [
  "parity-scale-codec",
  "proc-macro2 1.0.39",
@@ -7633,7 +7985,11 @@ dependencies = [
 [[package]]
 name = "substrate-wasm-builder"
 version = "5.0.0-dev"
+<<<<<<< HEAD
 source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.24#257cdb558c0decbd1da756b43288d06d02ff77c7"
+=======
+source = "git+https://github.com/paritytech/substrate?branch=polkadot-v0.9.23#76522d7937ba94ff1becef4e4e3ca78e3e1de341"
+>>>>>>> e88a9c8d (e2e: update pruntime ports)
 dependencies = [
  "ansi_term",
  "build-helper",
