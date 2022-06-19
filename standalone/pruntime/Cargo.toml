@@ -7,6 +7,7 @@ version = "0.1.0"
 panic = "abort"
 
 [dependencies]
+syn = "=1.0.82"
 anyhow = "1.0"
 clap = {version = "3", features = ["derive"]}
 colored = "2"
