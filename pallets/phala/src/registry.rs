@@ -20,7 +20,9 @@ pub mod pallet {
 	use crate::attestation::Error as AttestationError;
 	use crate::mq::MessageOriginInfo;
 	// Re-export
-	pub use crate::attestation::{Attestation, AttestationValidator, IasValidator};
+	pub use crate::attestation::{
+		extract_mrenclave, Attestation, AttestationValidator, IasValidator,
+	};
 
 	use phala_types::{
 		messaging::{
@@ -154,16 +156,16 @@ pub mod pallet {
 	pub enum Event<T: Config> {
 		/// A new Gatekeeper is enabled on the blockchain
 		GatekeeperAdded {
-			pubkey: WorkerPublicKey
+			pubkey: WorkerPublicKey,
 		},
 		GatekeeperRemoved {
-			pubkey: WorkerPublicKey
+			pubkey: WorkerPublicKey,
 		},
 		WorkerAdded {
-			pubkey: WorkerPublicKey
+			pubkey: WorkerPublicKey,
 		},
 		WorkerUpdated {
-			pubkey: WorkerPublicKey
+			pubkey: WorkerPublicKey,
 		},
 	}
 

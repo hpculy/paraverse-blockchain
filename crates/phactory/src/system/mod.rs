@@ -35,10 +35,10 @@ use phala_types::{
     contract::{self, messaging::ContractOperation, CodeIndex},
     messaging::{
         AeadIV, BatchDispatchClusterKeyEvent, BatchRotateMasterKeyEvent, ClusterKeyDistribution,
-        DispatchMasterKeyEvent, DispatchMasterKeyHistoryEvent, EncryptedKey, GatekeeperChange,
-        GatekeeperLaunch, HeartbeatChallenge, KeyDistribution, MiningReportEvent,
-        NewGatekeeperEvent, RemoveGatekeeperEvent, RotateMasterKeyEvent, SystemEvent,
-        WorkerClusterReport, WorkerContractReport, WorkerEvent,
+        DispatchMasterKeyEvent, DispatchMasterKeyHistoryEvent, GatekeeperChange, GatekeeperLaunch,
+        HeartbeatChallenge, KeyDistribution, MiningReportEvent, NewGatekeeperEvent,
+        RemoveGatekeeperEvent, RotateMasterKeyEvent, SystemEvent, WorkerClusterReport,
+        WorkerContractReport, WorkerEvent,
     },
     EcdhPublicKey, WorkerKeyChallenge, WorkerKeyChallengePayload, WorkerPublicKey,
 };
@@ -503,10 +503,14 @@ impl<Platform: pal::Platform> System<Platform> {
         }
     }
 
-    pub fn get_worker_key_challenge(&mut self) -> WorkerKeyChallenge<chain::BlockNumber> {
+    pub fn get_worker_key_challenge(
+        &mut self,
+        dev_mode: bool,
+    ) -> WorkerKeyChallenge<chain::BlockNumber> {
         let payload = WorkerKeyChallengePayload {
             block_number: self.block_number,
             now: self.now_ms,
+            dev_mode,
             nonce: crate::generate_random_info(),
         };
         self.last_challenge = Some(payload.clone());
@@ -528,17 +532,6 @@ impl<Platform: pal::Platform> System<Platform> {
         self.last_challenge = None;
         self.identity_key
             .verify_data(&challenge.signature, &challenge.payload.encode())
-    }
-
-    pub fn update_worker_key(&mut self, encrypted_key: EncryptedKey) {
-        let key = self.decrypt_key_from(
-            &encrypted_key.ecdh_pubkey,
-            &encrypted_key.encrypted_key,
-            &encrypted_key.iv,
-        );
-
-        self.identity_key = WorkerIdentityKey(key.clone());
-        self.ecdh_key = key.derive_ecdh_key().expect("Invalid worker key handover");
     }
 
     pub fn make_query(
@@ -869,10 +862,7 @@ impl<Platform: pal::Platform> System<Platform> {
                 self.set_master_key_history(vec![master_key.dump_secret_key()], false);
             }
 
-            let master_key = self
-                .master_key
-                .as_ref()
-                .expect("checked; qed.");
+            let master_key = self.master_key.as_ref().expect("checked; qed.");
             // upload the master key on chain via worker egress
             info!(
                 "Gatekeeper: upload master key {} on chain",
