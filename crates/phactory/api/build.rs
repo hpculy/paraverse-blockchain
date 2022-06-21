@@ -35,7 +35,7 @@ fn main() {
             "#[cfg_attr(feature = \"serde\", derive(::serde::Serialize, ::serde::Deserialize))]",
         )
     }
-    for r#type in ["WorkerKeyChallenge", "ChallengeClient"] {
+    for r#type in ["WorkerKeyChallenge", "ChallengeClient", "EncryptedWorkerKey"] {
         builder = builder.type_attribute(
             r#type,
             "#[derive(::parity_scale_codec::Encode, ::parity_scale_codec::Decode)]",
